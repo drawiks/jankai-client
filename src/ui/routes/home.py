@@ -1,11 +1,9 @@
-
 import flet as ft
 
 class HomeRoute:
     def __init__(self):
-        #post
         self.post_column = ft.Column(spacing=20)
-        self.post_field = ft.TextField(label="Что у вас нового?", multiline=True, max_lines=10, width=750)
+        self.post_field = ft.TextField(label="Что у вас нового?", multiline=True, max_lines=10, width=750, border_radius=15)
     
     def build(self, navigation_rail):
         return ft.View(
@@ -17,14 +15,6 @@ class HomeRoute:
                             navigation_rail,
                             ft.Column(
                                 [
-                                    ft.Text(
-                                        "Опубликовать пост",
-                                        size=50,
-                                        color=ft.Colors.WHITE,
-                                        weight=ft.FontWeight.W_100,
-                                        text_align=ft.TextAlign.CENTER,
-                                        font_family="plex medium"
-                                    ),
                                     self.post_field,
                                     ft.Row([
                                             ft.ElevatedButton("Опубликовать"),

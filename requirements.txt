@@ -3,3 +3,5 @@ fastapi==0.116.1
 uvicorn==0.35.0
 
 flet==0.28.3
+flet-audio==0.1.0
+flet-video==0.1.1
