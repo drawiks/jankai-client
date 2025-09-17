@@ -17,6 +17,7 @@ class App:
     def __init__(self, page: ft.Page):
         self.page = page
         self.page.title = "jankai"
+        self.page.window.resizable = False
         self.page.fonts = {
             "jersey": "/fonts/Jersey20-Regular.ttf",
             "plex bold": "/fonts/IBMPlexSans-Bold.ttf",

@@ -24,7 +24,7 @@ class HomeRoute:
                                     ft.Divider(thickness=1),
                                     self.post_column,
                                 ]
-                            )
+                            ),
                         ],
                     ),
                     expand=True
