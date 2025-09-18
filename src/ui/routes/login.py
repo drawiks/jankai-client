@@ -26,7 +26,7 @@ class LoginRoute:
                                 self.username_field,
                                 self.password_field,
                                 ft.TextButton(text="Нет аккаунта?", width=250, on_click=lambda e: e.page.go("/register")),
-                                ft.ElevatedButton(text="Вход", width=250)
+                                ft.ElevatedButton(text="Вход", width=250, on_click=lambda e: e.page.go("/"))
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
                             horizontal_alignment=ft.CrossAxisAlignment.CENTER

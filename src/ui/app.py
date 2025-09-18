@@ -18,6 +18,7 @@ class App:
         self.page = page
         self.page.title = "jankai"
         self.page.window.resizable = False
+        self.page.theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN_ACCENT_400, font_family="plex medium")
         self.page.fonts = {
             "jersey": "/fonts/Jersey20-Regular.ttf",
             "plex bold": "/fonts/IBMPlexSans-Bold.ttf",
@@ -34,12 +35,12 @@ class App:
         
         self.page.on_route_change = lambda e: self.route_change(self.page.route)
         self.page.on_view_pop = self.view_pop
-        self.page.go("/")
+        self.page.go("/login")
         
         self.navigation_rail = NavigationRail(on_change=self.on_rail_change)
 
     async def on_rail_change(self, e):
-        routes = ["/", "/profile", "/search"]
+        routes = ["/", "/profile", "/search", "/settings"]
         self.page.go(routes[e.control.selected_index])
     
     def route_change(self, route):
@@ -47,7 +48,7 @@ class App:
         if route in self.routes:
             self.page.views.append(self.routes[route].build(self.navigation_rail))
         else:
-            self.page.views.append(self.not_found_route.build())
+            self.page.views.append(self.not_found_route.build(self.navigation_rail))
         self.page.update()
 
     def view_pop(self, view):

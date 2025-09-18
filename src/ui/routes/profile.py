@@ -17,6 +17,7 @@ class ProfileRoute:
                                     ]
                                 )
                             ],
+                            spacing=25
                         ),
                         expand=True
                 ),

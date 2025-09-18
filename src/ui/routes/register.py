@@ -29,7 +29,7 @@ class RegisterRoute:
                                 self.password_field,
                                 self.email_field,
                                 ft.TextButton(text="Уже есть аккаунт?", width=250, on_click=lambda e: e.page.go("/login")),
-                                ft.ElevatedButton(text="Регистрация", width=250)
+                                ft.ElevatedButton(text="Регистрация", width=250, on_click=lambda e: e.page.go("/"))
                             ],
                             alignment=ft.MainAxisAlignment.CENTER,
                             horizontal_alignment=ft.CrossAxisAlignment.CENTER
