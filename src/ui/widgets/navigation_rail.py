@@ -6,7 +6,7 @@ class NavigationRail(ft.NavigationRail):
         super().__init__(destinations, elevation, selected_index, extended, label_type, bgcolor, indicator_color, indicator_shape, leading, trailing, min_width, min_extended_width, group_alignment, selected_label_text_style, unselected_label_text_style, on_change, ref, width, height, left, top, right, bottom, expand, expand_loose, col, opacity, rotate, scale, offset, aspect_ratio, animate_opacity, animate_size, animate_position, animate_rotation, animate_scale, animate_offset, on_animation_end, visible, disabled, data, rtl)
         self.on_change = on_change
         self.selected_index = 0
-        self.leading = ft.Text("jankai", font_family="jersey", size=50)
+        self.leading = ft.Text("jankai", font_family="jersey", size=50, color=ft.Colors.LIGHT_GREEN_300)
         self.destinations = [
             ft.NavigationRailDestination(icon=ft.Icons.HOME, label="Home"),
             ft.NavigationRailDestination(icon=ft.Icons.ACCOUNT_CIRCLE, label="Profile"),

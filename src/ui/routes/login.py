@@ -1,3 +1,4 @@
+
 import flet as ft
 
 class LoginRoute:
@@ -16,9 +17,9 @@ class LoginRoute:
                         ft.Column(
                             controls=[
                                 ft.Text(
-                                    "DOSH",
+                                    "jankai",
                                     size=50,
-                                    color=ft.Colors.WHITE,
+                                    color=ft.Colors.LIGHT_GREEN_300,
                                     weight=ft.FontWeight.W_100,
                                     text_align=ft.TextAlign.CENTER,
                                     font_family="jersey"
