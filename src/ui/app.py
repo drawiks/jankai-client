@@ -18,7 +18,6 @@ class App:
         self.page = page
         self.page.title = "jankai"
         self.page.window.resizable = False
-        self.page.window.title_bar_hidden = True
         self.page.window.center()
         self.page.theme = ft.Theme(color_scheme_seed=ft.Colors.GREEN_ACCENT_400, font_family="plex medium")
         self.page.fonts = {
